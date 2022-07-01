@@ -4,14 +4,20 @@
 
 # Tecnologias usadas
 
-- Node 18.4.0
-- Angular/cli 13.13.8
-- Npm 8.13.2
+- [Node](https://nodejs.org/dist/latest-v18.x/docs/api/)
+- [Angular](https://angular.io/cli)
+- [Po-UI](https://po-ui.io/guides/getting-started)
 
 ## Instalação
 
 ```
 npm i -g @angular/cli@13
-npm install -g npm@8.13.2
-npm install
+npm i -g npm@8.13.2
+npm i
+```
+
+## Execute
+
+```
+ng serve
 ```

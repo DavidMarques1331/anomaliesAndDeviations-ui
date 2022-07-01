@@ -7,16 +7,20 @@ import {
 } from '@angular/platform-browser';
 
 import {
-    AppComponent,
-} from './app.component';
+    RouterModule,
+} from '@angular/router';
 
 import {
     PoModule,
 } from '@po-ui/ng-components';
 
 import {
-    RouterModule,
-} from '@angular/router';
+    PoTemplatesModule,
+} from '@po-ui/ng-templates';
+
+import {
+    AppComponent,
+} from './app.component';
 
 // eslint-disable-next-line new-cap
 @NgModule({
@@ -27,12 +31,11 @@ import {
         BrowserModule,
         PoModule,
         RouterModule.forRoot([]),
+        PoTemplatesModule,
     ],
     providers: [],
     bootstrap: [AppComponent],
 })
 
-/**
- * Módulo principal
- */
+// eslint-disable-next-line require-jsdoc
 export class AppModule { }
