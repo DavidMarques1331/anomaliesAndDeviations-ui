@@ -4,9 +4,9 @@
 name: Changelog
 
 on:
-    push:
-        branches: 
-        - main
+  push:
+    branches: 
+      - main
 
 jobs:
   build:
@@ -33,10 +33,10 @@ jobs:
       with:
         node-version: 11.x
 
-    # Instala as dependências, vai para a master e executa o standard-version, e envia o commit e tag
+    # Instala as dependências, vai para a main e executa o standard-version, e envia o commit e tag
     - name: Gera o CHANGELOG
       run: |
         npm ci
-        git checkout master
+        git checkout main
         npm run release
-        git push origin master --follow-tags
+        git push origin main --follow-tags
