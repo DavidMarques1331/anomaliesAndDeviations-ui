@@ -24,7 +24,7 @@ import {
 
 import {
     HomeComponent,
-} from './home/home.component';
+} from './pages/home/home.component';
 
 // eslint-disable-next-line new-cap
 @NgModule({
