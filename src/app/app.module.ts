@@ -22,10 +22,15 @@ import {
     AppComponent,
 } from './app.component';
 
+import {
+    HomeComponent,
+} from './home/home.component';
+
 // eslint-disable-next-line new-cap
 @NgModule({
     declarations: [
         AppComponent,
+        HomeComponent,
     ],
     imports: [
         BrowserModule,
