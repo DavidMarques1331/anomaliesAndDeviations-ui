@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.1 (2022-07-11)
+
+
+### Funcionalidades
+
+* **package:** versão da aplicação ([1e90d78](https://github.com/DavidMarques1331/anomaliesAndDeviations-ui/commit/1e90d789e3e29cd7d617920009cff1077540f909))
+
 ### 0.0.0 (2022-07-11)
 
 ### Features
