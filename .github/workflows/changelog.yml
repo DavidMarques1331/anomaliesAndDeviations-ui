@@ -4,9 +4,9 @@
 name: Changelog
 
 on:
-    push:
-        branches: 
-        - main
+  push:
+    branches: 
+      - main
 
 jobs:
   build:
@@ -15,8 +15,12 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [18.x]
+
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
 
     # configura o GITHUB_TOKEN
     # https://help.github.com/en/actions/automating-your-workflow-with-github-actions/authenticating-with-the-github_token
@@ -28,15 +32,15 @@ jobs:
         email: "changelog@users.noreply.github.com"
 
     # Instala a versão 11.x do Node.js
-    - name: Instala o Node.js 11.x
-      uses: actions/setup-node@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
       with:
-        node-version: 11.x
+        node-version: ${{ matrix.node-version }}
 
-    # Instala as dependências, vai para a master e executa o standard-version, e envia o commit e tag
+    # Instala as dependências, vai para a main e executa o standard-version, e envia o commit e tag
     - name: Gera o CHANGELOG
       run: |
         npm ci
-        git checkout master
+        git checkout main
         npm run release
-        git push origin master --follow-tags
+        git push origin main --follow-tags
